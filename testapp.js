@@ -6,7 +6,9 @@ import Groq from "groq-sdk";
 
 dotenv.config();
 
-const logger = pino();
+const logger = pino({
+  base: false,
+});
 
 const groq = new Groq({
   apiKey: process.env.GROQ_API_KEY,
